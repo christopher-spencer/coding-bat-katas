@@ -70,7 +70,7 @@ public class codingBatKatas {
     makes10(9, 10) → true
     makes10(9, 9) → false
     makes10(1, 9) → true*/
-    
+
     public boolean makes10(int a, int b) {
         if (a == 10 || b == 10 || a + b == 10) {
             return true;
@@ -78,6 +78,81 @@ public class codingBatKatas {
         return false;
 
     }
+
+
+ /*   Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
+
+    nearHundred(93) → true
+    nearHundred(90) → true
+    nearHundred(89) → false*/
+
+    public boolean nearHundred(int n) {
+        if (n >= 90 && n <= 110) {
+            return true;
+        }
+        if (n >= 190 && n <= 210) {
+            return true;
+        }
+        return false;
+    }
+
+
+   /* Given 2 int values, return true if one is negative and one is positive. Except if the parameter "negative" is true, then return true only if both are negative.
+
+    posNeg(1, -1, false) → true
+    posNeg(-1, 1, false) → true
+    posNeg(-4, -5, true) → true*/
+
+    public boolean posNeg(int a, int b, boolean negative) {
+        if(a < 0 && negative == false && b > 0 || b < 0 && negative ==false && a > 0) {
+            return true;
+        }
+        if (negative == true && b < 0 && a < 0) {
+            return true;
+        }
+        return false;
+    }
+
+
+/*    Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings.
+
+    notString("candy") → "not candy"
+    notString("x") → "not x"
+    notString("not bad") → "not bad"*/
+
+    public String notString(String str) {
+
+        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+            return str;
+        }
+
+        return "not " + str;
+
+    }
+
+/*    Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive).
+    missingChar("kitten", 1) → "ktten"
+    missingChar("kitten", 0) → "itten"
+    missingChar("kitten", 4) → "kittn"*/
+
+    public String missingChar(String str, int n) {
+        String charLess = "";
+
+        for(int i = 0; i < str.length(); i++) {
+            if( i != n ){
+                charLess += str.charAt(i);
+            }
+        }
+        return charLess;
+    }
+
+
+
+
+
+
+
+
 
 
 
