@@ -262,8 +262,25 @@ public class codingBatKatas {
     }
 
 
+/*    Given two temperatures, return true if one is less than 0 and the other is greater than 100.
+    icyHot(120, -1) → true
+    icyHot(-1, 120) → true
+    icyHot(2, 120) → false*/
 
+    public boolean icyHot(int temp1, int temp2) {
 
+        int lowerTemp = Math.min(temp1, temp2);
+        int higherTemp = Math.max(temp1, temp2);
+
+        if ( (lowerTemp < 0) && (higherTemp > 100) ) {
+
+            return true;
+        }
+
+        return false;
+    }
+
+    
 
 
 
