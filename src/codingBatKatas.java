@@ -147,8 +147,49 @@ public class codingBatKatas {
     }
 
 
+ /*   Given a string, return a new string where the first and last chars have been exchanged.
+
+    frontBack("code") → "eodc"
+    frontBack("a") → "a"
+    frontBack("ab") → "ba"*/
+
+    public String frontBack(String str) {
+
+        if (str.length() <= 1) {
+
+            return str;
+        }
+
+        String newString = "";
+        String firstChar = str.substring(str.length() - 1);
+        String lastChar = str.substring(0,1);
+        String middle = str.substring(1, str.length() - 1);
+
+        newString = firstChar + middle + lastChar;
+
+        return newString;
+
+    }
 
 
+/*    Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+    front3("Java") → "JavJavJav"
+    front3("Chocolate") → "ChoChoCho"
+    front3("abc") → "abcabcabc"*/
+
+    public String front3(String str) {
+
+        String firstThree = "";
+
+        if (str.length() < 3) {
+            return str + str + str;
+        }
+
+        firstThree = str.substring(0, 3);
+
+        return firstThree + firstThree + firstThree;
+        
+    }
 
 
 
