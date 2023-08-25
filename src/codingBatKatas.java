@@ -327,7 +327,6 @@ public class codingBatKatas {
 
             return true;
         }
-
         return false;
     }
 
@@ -357,9 +356,7 @@ public class codingBatKatas {
 
                 return firstIndex + fourthIndex;
             }
-
         }
-
         return str;
     }
 
@@ -369,7 +366,6 @@ public class codingBatKatas {
     mixStart("piz snacks") → false*/
 
     public boolean mixStart(String str) {
-
         if ( str.length() < 3 ) {
             return false;
         }
@@ -379,7 +375,28 @@ public class codingBatKatas {
         return false;
     }
 
-    
+  /*  Given a string, return a string made of the first 2 chars (if present), however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
+    startOz("ozymandias") → "oz"
+    startOz("bzoo") → "z"
+    startOz("oxx") → "o"*/
+
+    public String startOz(String str) {
+        if (str.length() < 1) {
+            return str;
+        }
+        if (str.length() < 2) {
+            return str;
+        }
+        if (str.substring(0, 2).equals("oz") ) {
+            return str.substring(0, 2);
+        } else if (str.substring(0,1).equals("o") ) {
+            return str.substring(0,1);
+        } else if (str.substring(1,2).equals("z") ) {
+            return str.substring(1,2);
+        }
+        return "";
+    }
+
 
 
 
