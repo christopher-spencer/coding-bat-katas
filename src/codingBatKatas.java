@@ -331,7 +331,37 @@ public class codingBatKatas {
         return false;
     }
 
+    /*Given a string, if the string "del" appears starting at index 1, return a string where that "del" has been deleted. Otherwise, return the string unchanged.
 
+    delDel("adelbc") → "abc"
+    delDel("adelHello") → "aHello"
+    delDel("adedbc") → "adedbc"*/
+
+    public String delDel(String str) {
+
+        String firstIndex = "";
+        String fourthIndex = "";
+
+        if (str.length() < 4) {
+
+            return str;
+        }
+
+        if (str.length() >= 4 ) {
+
+            firstIndex = str.substring(0, 1);
+
+            fourthIndex = str.substring(4);
+
+            if (str.substring(1,4).equals("del")) {
+
+                return firstIndex + fourthIndex;
+            }
+
+        }
+
+        return str;
+    }
 
 
 
