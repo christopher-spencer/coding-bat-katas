@@ -525,6 +525,6 @@ public class codingBatKatas {
 
 
 
-    
+
 
 }
