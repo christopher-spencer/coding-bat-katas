@@ -762,8 +762,41 @@ public class codingBatKatas {
         return counter;
     }
 
+//    Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or end should not be removed.
+//    stringX("xxHxix") → "xHix"
+//    stringX("abxxxcd") → "abcd"
+//    stringX("xabxxxcdx") → "xabcdx"
 
-    
+    public String stringX(String str) {
+
+        if (str.length() < 1 ) {
+            return "";
+        }
+
+        if (str.length() < 2 && str.equals("x") ) {
+            return "x";
+        }
+
+        String noX = "";
+
+        if (str.substring(0,1).equals("x") ) {
+            noX += "x";
+        }
+
+        for (int i = 0; i < str.length(); i++) {
+            if (!str.substring(i, i+1).equals("x") ) {
+                noX += str.substring(i, i+1);
+            }
+        }
+
+        if (str.substring(str.length() -1).equals("x") ) {
+            noX += "x";
+        }
+
+        return noX;
+
+    }
+
 
 
 }
