@@ -798,5 +798,43 @@ public class codingBatKatas {
     }
 
 
+//    Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".
+//     altPairs("kitten") → "kien"
+//    altPairs("Chocolate") → "Chole"
+//    altPairs("CodingHorror") → "Congrr"
+
+    public String altPairs(String str) {
+
+        String newString = "";
+
+        if (str.length() < 2) {
+            return str;
+        }
+
+        newString = str.substring(0,2);
+
+        if (str.length() > 5) {
+            newString += str.substring(4,6);
+        }
+
+        if (str.length() == 9) {
+            newString += str.substring(8,9);
+        }
+
+        if (str.length() > 9 ) {
+            newString += str.substring(8,10);
+        }
+
+        if (str.length() > 12 ) {
+            newString += str.substring(12,14);
+        }
+
+        return newString;
+
+    }
+
+
+
+
 
 }
