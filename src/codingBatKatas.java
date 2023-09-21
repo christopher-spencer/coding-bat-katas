@@ -833,6 +833,32 @@ public class codingBatKatas {
 
     }
 
+//    Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but the "a" can be any char. The "yak" strings will not overlap.
+//    stringYak("yakpak") → "pak"
+//    stringYak("pakyak") → "pak"
+//    stringYak("yak123ya") → "123ya"
+
+    public String stringYak(String str) {
+
+        String noYak = "";
+
+        for (int i = 0; i < str.length()-2; i++) {
+            if (!str.substring(i,i+3).equals("yak") ) {
+                noYak += str.substring(i,i+1);
+            } else {
+                i += 2;
+            }
+        }
+
+        if (!str.substring(str.length() - 3,str.length() - 2).equals("y") ) {
+            noYak += str.substring(str.length() - 2);
+        }
+
+        return noYak;
+
+    }
+
+
 
 
 
