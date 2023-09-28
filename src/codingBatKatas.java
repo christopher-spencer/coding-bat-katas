@@ -1809,6 +1809,37 @@ public class codingBatKatas {
     }
 
 
+//    Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be length 0, 1, or 2.
+//    double23([2, 2]) → true
+//    double23([3, 3]) → true
+//    double23([2, 3]) → false
+
+    public boolean double23(int[] nums) {
+        int counter2 = 0;
+        int counter3 = 0;
+
+        if (nums.length < 2) {
+            return false;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 2) {
+                counter2++;
+            }
+            if (nums[i] == 3) {
+                counter3++;
+            }
+        }
+
+        if (counter2 > 1 || counter3 > 1) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+
 
 
 
