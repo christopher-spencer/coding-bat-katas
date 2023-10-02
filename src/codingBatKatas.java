@@ -3,7 +3,8 @@ import java.util.Map;
 
 public class codingBatKatas {
 
-/*    The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
+/*    The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation.
+We sleep in if it is not a weekday or we're on vacation. Return true if we sleep in.
     sleepIn(false, false) → true
     sleepIn(true, false) → false
     sleepIn(false, true) → true*/
@@ -15,7 +16,8 @@ public class codingBatKatas {
         return false;
     }
 
-  /*  We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.
+  /*  We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling.
+  We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.
     monkeyTrouble(true, true) → true
     monkeyTrouble(false, false) → true
     monkeyTrouble(true, false) → false*/
@@ -54,7 +56,8 @@ public class codingBatKatas {
     }
 
 
-   /* We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.
+   /* We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble
+   if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.
 
     parrotTrouble(true, 6) → true
     parrotTrouble(true, 7) → false
@@ -65,11 +68,9 @@ public class codingBatKatas {
             return true;
         }
         return false;
-
     }
 
 /*    Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
-
     makes10(9, 10) → true
     makes10(9, 9) → false
     makes10(1, 9) → true*/
@@ -79,12 +80,9 @@ public class codingBatKatas {
             return true;
         }
         return false;
-
     }
 
-
  /*   Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
-
     nearHundred(93) → true
     nearHundred(90) → true
     nearHundred(89) → false*/
@@ -98,7 +96,6 @@ public class codingBatKatas {
         }
         return false;
     }
-
 
    /* Given 2 int values, return true if one is negative and one is positive. Except if the parameter "negative" is true, then return true only if both are negative.
 
@@ -116,8 +113,8 @@ public class codingBatKatas {
         return false;
     }
 
-
-/*    Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged. Note: use .equals() to compare 2 strings.
+/*    Given a string, return a new string where "not " has been added to the front. However, if the string already begins with
+ "not", return the string unchanged. Note: use .equals() to compare 2 strings.
 
     notString("candy") → "not candy"
     notString("x") → "not x"
@@ -128,12 +125,12 @@ public class codingBatKatas {
         if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
             return str;
         }
-
         return "not " + str;
-
     }
 
-/*    Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive).
+/*    Given a non-empty string and an int n, return a new string where the char at index n has been removed.
+The value of n will be a valid index of a char in the original string (i.e. n will be in the range
+0..str.length()-1 inclusive).
     missingChar("kitten", 1) → "ktten"
     missingChar("kitten", 0) → "itten"
     missingChar("kitten", 4) → "kittn"*/
@@ -148,7 +145,6 @@ public class codingBatKatas {
         }
         return charLess;
     }
-
 
  /*   Given a string, return a new string where the first and last chars have been exchanged.
 
@@ -171,9 +167,7 @@ public class codingBatKatas {
         newString = firstChar + middle + lastChar;
 
         return newString;
-
     }
-
 
 /*    Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
     front3("Java") → "JavJavJav"
@@ -191,10 +185,10 @@ public class codingBatKatas {
         firstThree = str.substring(0, 3);
 
         return firstThree + firstThree + firstThree;
-
     }
 
-/*    Given a string, take the last char and return a new string with the last char added at the front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
+/*    Given a string, take the last char and return a new string with the last char added at the front and back,
+so "cat" yields "tcatt". The original string will be length 1 or more.
     backAround("cat") → "tcatt"
     backAround("Hello") → "oHelloo"
     backAround("a") → "aaa"*/
@@ -205,7 +199,6 @@ public class codingBatKatas {
 
         return newString + str + newString;
     }
-
 
 /*    Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % "mod" operator -- see Introduction to Mod
     or35(3) → true
@@ -219,11 +212,10 @@ public class codingBatKatas {
             return true;
         }
         return false;
-
     }
 
-
-   /* Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever chars are there.
+   /* Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back,
+   so "kitten" yields"kikittenki". If the string length is less than 2, use whatever chars are there.
     front22("kitten") → "kikittenki"
     front22("Ha") → "HaHaHa"
     front22("abc") → "ababcab"*/
@@ -240,13 +232,10 @@ public class codingBatKatas {
 
             frontEnd = str.substring(0, 2);
         }
-
         return frontEnd + str + frontEnd;
-
     }
 
 /*    Given a string, return true if the string starts with "hi" and false otherwise.
-
     startHi("hi there") → true
     startHi("hi") → true
     startHi("hello hi") → false*/
@@ -260,10 +249,8 @@ public class codingBatKatas {
                 return true;
             }
         }
-
         return false;
     }
-
 
 /*    Given two temperatures, return true if one is less than 0 and the other is greater than 100.
     icyHot(120, -1) → true
@@ -279,10 +266,8 @@ public class codingBatKatas {
 
             return true;
         }
-
         return false;
     }
-
 
   /*  Given 2 int values, return true if either of them is in the range 10..20 inclusive.
     in1020(12, 99) → true
@@ -400,7 +385,6 @@ public class codingBatKatas {
         return "";
     }
 
-
  /*   Given three int values, a b c, return the largest.
     intMax(1, 2, 3) → 3
     intMax(1, 3, 2) → 3
@@ -453,7 +437,6 @@ public class codingBatKatas {
         return false;
     }
 
-
 /*    Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, or return 0 if neither is in that range.
 
     max1020(11, 19) → 19
@@ -473,7 +456,6 @@ public class codingBatKatas {
 
         return 0;
     }
-
 
 /*    Return true if the given string contains between 1 and 3 'e' chars.
 
@@ -541,7 +523,6 @@ public class codingBatKatas {
         return newString;
     }
 
-
 //    Given a string and a non-negative int n, return a larger string that is n copies of the original string.
 //    stringTimes("Hi", 2) → "HiHi"
 //    stringTimes("Hi", 3) → "HiHiHi"
@@ -559,7 +540,8 @@ public class codingBatKatas {
     }
 
 
-//    Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front;
+//    Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars, or whatever
+//    is there if the string is less than length 3. Return n copies of the front;
 //    frontTimes("Chocolate", 2) → "ChoCho"
 //    frontTimes("Chocolate", 3) → "ChoChoCho"
 //    frontTimes("Abc", 3) → "AbcAbcAbc"
@@ -576,10 +558,8 @@ public class codingBatKatas {
                 newString += str.substring(0,3);
             }
         }
-
         return newString;
     }
-
 
 //    Count the number of "xx" in the given string. We'll say that overlapping is allowed, so "xxx" contains 2 "xx".
 //    countXX("abcxx") → 1
@@ -595,7 +575,6 @@ public class codingBatKatas {
                 counter++;
             }
         }
-
         return counter;
     }
 
@@ -619,11 +598,8 @@ public class codingBatKatas {
             }
 
         }
-
         return xX;
-
     }
-
 
 //    Given a string, return a new string made of every other char starting with the first, so "Hello" yields "Hlo".
 //    stringBits("Hello") → "Hlo"
@@ -643,7 +619,6 @@ public class codingBatKatas {
 
     }
 
-
 //    Given a non-empty string like "Code" return a string like "CCoCodCode".
 //    stringSplosion("Code") → "CCoCodCode"
 //    stringSplosion("abc") → "aababc"
@@ -656,13 +631,11 @@ public class codingBatKatas {
         for(int i = 0; i < str.length(); i++) {
             newString = newString + str.substring(0,i+1);
         }
-
         return newString;
-
     }
 
-
-//    Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
+//    Given a string, return the count of the number of times that a substring length 2 appears in the string
+//    and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
 //    last2("hixxhi") → 1
 //    last2("xaxxaxaxx") → 1
 //    last2("axxxaaxx") → 2
@@ -683,7 +656,6 @@ public class codingBatKatas {
             }
 
         }
-
         return counter;
     }
 
@@ -701,12 +673,11 @@ public class codingBatKatas {
                 counter++;
             }
         }
-
         return counter;
-
     }
 
-//    Given an array of ints, return true if one of the first 4 elements in the array is a 9. The array length may be less than 4.
+//    Given an array of ints, return true if one of the first 4 elements in the array is a 9. The array length
+//    may be less than 4.
 //    arrayFront9([1, 2, 9, 3, 4]) → true
 //    arrayFront9([1, 2, 3, 4, 9]) → false
 //    arrayFront9([1, 2, 3, 4, 5]) → false
@@ -721,11 +692,8 @@ public class codingBatKatas {
                 return true;
             }
         }
-
         return false;
-
     }
-
 
 //    Given an array of ints, return true if the sequence of numbers 1, 2, 3 appears in the array somewhere.
 //    array123([1, 1, 2, 3, 1]) → true
@@ -739,13 +707,12 @@ public class codingBatKatas {
                 return true;
             }
         }
-
         return false;
-
     }
 
-
-//    Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both strings.
+//    Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring.
+//    So "xxcaazz" and "xxbaaz" yields 3, since the "xx", "aa", and "az" substrings appear in the same place in both
+//    strings.
 //    stringMatch("xxcaazz", "xxbaaz") → 3
 //    stringMatch("abc", "abc") → 2
 //    stringMatch("abc", "axc") → 0
@@ -761,11 +728,11 @@ public class codingBatKatas {
                 counter++;
             }
         }
-
         return counter;
     }
 
-//    Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or end should not be removed.
+//    Given a string, return a version where all the "x" have been removed. Except an "x" at the very start or end
+//    should not be removed.
 //    stringX("xxHxix") → "xHix"
 //    stringX("abxxxcd") → "abcd"
 //    stringX("xabxxxcdx") → "xabcdx"
@@ -795,11 +762,8 @@ public class codingBatKatas {
         if (str.substring(str.length() -1).equals("x") ) {
             noX += "x";
         }
-
         return noX;
-
     }
-
 
 //    Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... so "kittens" yields "kien".
 //     altPairs("kitten") → "kien"
@@ -831,12 +795,11 @@ public class codingBatKatas {
         if (str.length() > 12 ) {
             newString += str.substring(12,14);
         }
-
         return newString;
-
     }
 
-//    Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but the "a" can be any char. The "yak" strings will not overlap.
+//    Suppose the string "yak" is unlucky. Given a string, return a version where all the "yak" are removed, but the "a"
+//    can be any char. The "yak" strings will not overlap.
 //    stringYak("yakpak") → "pak"
 //    stringYak("pakyak") → "pak"
 //    stringYak("yak123ya") → "123ya"
@@ -856,13 +819,11 @@ public class codingBatKatas {
         if (!str.substring(str.length() - 3,str.length() - 2).equals("y") ) {
             noYak += str.substring(str.length() - 2);
         }
-
         return noYak;
-
     }
 
-
-//    Given an array of ints, return the number of times that two 6's are next to each other in the array. Also count instances where the second "6" is actually a 7.
+//    Given an array of ints, return the number of times that two 6's are next to each other in the array. Also count
+//    instances where the second "6" is actually a 7.
 //    array667([6, 6, 2]) → 1
 //    array667([6, 6, 2, 6]) → 1
 //    array667([6, 7, 2, 6]) → 1
@@ -878,13 +839,11 @@ public class codingBatKatas {
                 }
             }
         }
-
         return counter;
-
     }
 
-
-//    Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array. Return true if the array does not contain any triples.
+//    Given an array of ints, we'll say that a triple is a value appearing 3 times in a row in the array. Return true if
+//    the array does not contain any triples.
 //    noTriples([1, 1, 2, 2, 1]) → true
 //    noTriples([1, 1, 2, 2, 2, 1]) → false
 //    noTriples([1, 1, 1, 2, 2, 2, 1]) → false
@@ -896,12 +855,11 @@ public class codingBatKatas {
                 return false;
             }
         }
-
         return true;
     }
 
-
-//    Given an array of ints, return true if it contains a 2, 7, 1 pattern: a value, followed by the value plus 5, followed by the value minus 1. Additionally the 271 counts even if the "1" differs by 2 or less from the correct value.
+//    Given an array of ints, return true if it contains a 2, 7, 1 pattern: a value, followed by the value plus 5,
+//    followed by the value minus 1. Additionally the 271 counts even if the "1" differs by 2 or less from the correct value.
 //    has271([1, 2, 7, 1]) → true
 //    has271([1, 2, 8, 1]) → false
 //    has271([2, 7, 1]) → true
@@ -913,20 +871,16 @@ public class codingBatKatas {
                 return true;
             }
         }
-
         return false;
     }
-
 
 //    Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
 //    helloName("Bob") → "Hello Bob!"
 //    helloName("Alice") → "Hello Alice!"
 //    helloName("X") → "Hello X!"
-
     public String helloName(String name) {
         return "Hello " + name + "!";
     }
-
 
 //    Given two strings, a and b, return the result of putting them together in the order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
 //    makeAbba("Hi", "Bye") → "HiByeByeHi"
@@ -937,8 +891,9 @@ public class codingBatKatas {
         return a + b + b + a;
     }
 
-
-//    The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text. In this example, the "i" tag makes <i> and </i> which surround the word "Yay". Given tag and word strings, create the HTML string with tags around the word, e.g. "<i>Yay</i>".
+//    The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text. In this example, the "i" tag
+//    makes <i> and </i> which surround the word "Yay". Given tag and word strings, create the HTML string with tags around
+//    the word, e.g. "<i>Yay</i>".
 //    makeTags("i", "Yay") → "<i>Yay</i>"
 //    makeTags("i", "Hello") → "<i>Hello</i>"
 //    makeTags("cite", "Yay") → "<cite>Yay</cite>"
@@ -946,11 +901,11 @@ public class codingBatKatas {
     public String makeTags(String tag, String word) {
 
         return "<" + tag + ">" + word + "</" + tag + ">";
-
     }
 
-
-//    Given an "out" string length 4, such as "<<>>", and a word, return a new string where the word is in the middle of the out string, e.g. "<<word>>". Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j.
+//    Given an "out" string length 4, such as "<<>>", and a word, return a new string where the word is in the middle of
+//    the out string, e.g. "<<word>>". Note: use str.substring(i, j) to extract the String starting at index i and going
+//    up to but not including index j.
 //    makeOutWord("<<>>", "Yay") → "<<Yay>>"
 //    makeOutWord("<<>>", "WooHoo") → "<<WooHoo>>"
 //    makeOutWord("[[]]", "word") → "[[word]]"
@@ -958,9 +913,7 @@ public class codingBatKatas {
     public String makeOutWord(String out, String word) {
 
         return out.substring(0,2) + word + out.substring(2);
-
     }
-
 
 //    Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2.
 //    extraEnd("Hello") → "lololo"
@@ -971,8 +924,9 @@ public class codingBatKatas {
         return str.substring(str.length()-2) + str.substring(str.length()-2) + str.substring(str.length()-2);
     }
 
-
-//    Given a string, return the string made of its first two chars, so the String "Hello" yields "He". If the string is shorter than length 2, return whatever there is, so "X" yields "X", and the empty string "" yields the empty string "". Note that str.length() returns the length of a string.
+//    Given a string, return the string made of its first two chars, so the String "Hello" yields "He". If the string is
+//    shorter than length 2, return whatever there is, so "X" yields "X", and the empty string "" yields the empty string "".
+//    Note that str.length() returns the length of a string.
 //    firstTwo("Hello") → "He"
 //    firstTwo("abcdefg") → "ab"
 //    firstTwo("ab") → "ab"
@@ -982,10 +936,8 @@ public class codingBatKatas {
         if (str.length() < 2 ) {
             return str;
         }
-
         return str.substring(0,2);
     }
-
 
 //    Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
 //    firstHalf("WooHoo") → "Woo"
@@ -997,7 +949,6 @@ public class codingBatKatas {
         int firstHalf = str.length() / 2;
 
         return str.substring(0, firstHalf);
-
     }
 
 //    Given a string, return a version without the first and last char, so "Hello" yields "ell". The string length will be at least 2.
@@ -1014,11 +965,10 @@ public class codingBatKatas {
         String middle = str.substring(1,str.length()-1);
 
         return middle;
-
     }
 
-
-//    Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).
+//    Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside
+//    and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).
 //    comboString("Hello", "hi") → "hiHellohi"
 //    comboString("hi", "Hello") → "hiHellohi"
 //    comboString("aaa", "b") → "baaab"
@@ -1032,9 +982,7 @@ public class codingBatKatas {
         } else {
             return b + a + b;
         }
-
     }
-
 
 //    Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
 //    nonStart("Hello", "There") → "ellohere"
@@ -1046,9 +994,7 @@ public class codingBatKatas {
         String two = b.substring(1);
 
         return one + two;
-
     }
-
 
 //    Given a string, return a "rotated left 2" version where the first 2 chars are moved to the end. The string length will be at least 2.
 //    left2("Hello") → "lloHe"
@@ -1063,7 +1009,6 @@ public class codingBatKatas {
         return newBeginnings + newEnd;
     }
 
-
 //    Given a string, return a "rotated right 2" version where the last 2 chars are moved to the start. The string length will be at least 2.
 //    right2("Hello") → "loHel"
 //    right2("java") → "vaja"
@@ -1074,9 +1019,7 @@ public class codingBatKatas {
         String lastTwo = str.substring(str.length() - 2);
 
         return lastTwo + str.substring(0,str.length() - 2);
-
     }
-
 
 //    Given a string, return a string length 1 from its front, unless front is false, in which case return a string length 1 from its back. The string will be non-empty.
 //    theEnd("Hello", true) → "H"
@@ -1090,9 +1033,7 @@ public class codingBatKatas {
         } else {
             return str.substring(str.length() - 1);
         }
-
     }
-
 
 //    Given a string, return a version without both the first and last char of the string. The string may be any length, including 0.
 //    withouEnd2("Hello") → "ell"
@@ -1109,7 +1050,6 @@ public class codingBatKatas {
         return middle;
     }
 
-
 //    Given a string of even length, return a string made of the middle two chars, so the string "string" yields "ri". The string length will be at least 2.
 //    middleTwo("string") → "ri"
 //    middleTwo("code") → "od"
@@ -1119,9 +1059,7 @@ public class codingBatKatas {
         int middle = str.length() /2;
 
         return str.substring(middle -1,middle + 1);
-
     }
-
 
 //    Given a string, return true if it ends in "ly".
 //    endsLy("oddly") → true
@@ -1139,7 +1077,6 @@ public class codingBatKatas {
         } else {
             return false;
         }
-
     }
 
 //    Given a string and an int n, return a string made of the first and last n chars from the string. The string length will be at least n.
@@ -1153,11 +1090,10 @@ public class codingBatKatas {
         String lastPart = str.substring(str.length() - n);
 
         return firstPart + lastPart;
-
     }
 
-
-//    Given a string and an index, return a string length 2 starting at the given index. If the index is too big or too small to define a string length 2, use the first 2 chars. The string length will be at least 2.
+//    Given a string and an index, return a string length 2 starting at the given index. If the index is too big or
+//    too small to define a string length 2, use the first 2 chars. The string length will be at least 2.
 //    twoChar("java", 0) → "ja"
 //    twoChar("java", 2) → "va"
 //    twoChar("java", 3) → "ja"
@@ -1169,9 +1105,7 @@ public class codingBatKatas {
         }
 
         return str.substring(index, index +2);
-
     }
-
 
 //    Given a string of odd length, return the string length 3 from its middle, so "Candy" yields "and". The string length will be at least 3.
 //    middleThree("Candy") → "and"
@@ -1183,11 +1117,10 @@ public class codingBatKatas {
         int middleIndex = str.length()/2;
 
         return str.substring(middleIndex -1, middleIndex+2);
-
     }
 
-
-//    Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as with "badxxx" or "xbadxx" but not "xxbadxx". The string may be any length, including 0. Note: use .equals() to compare 2 strings.
+//    Given a string, return true if "bad" appears starting at index 0 or 1 in the string, such as with "badxxx" or
+//    "xbadxx" but not "xxbadxx". The string may be any length, including 0. Note: use .equals() to compare 2 strings.
 //    hasBad("badxx") → true
 //    hasBad("xbadxx") → true
 //    hasBad("xxbadxx") → false
@@ -1207,11 +1140,10 @@ public class codingBatKatas {
         } else {
             return false;
         }
-
     }
 
-
-//    Given a string, return a string length 2 made of its first 2 chars. If the string length is less than 2, use '@' for the missing chars.
+//    Given a string, return a string length 2 made of its first 2 chars. If the string length is less than 2, use '@'
+//    for the missing chars.
 //    atFirst("hello") → "he"
 //    atFirst("hi") → "hi"
 //    atFirst("h") → "h@"
@@ -1226,8 +1158,8 @@ public class codingBatKatas {
         return str.substring(0,2);
     }
 
-
-//    Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so "yo" and "java" yields "ya". If either string is length 0, use '@' for its missing char.
+//    Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so "yo" and
+//    "java" yields "ya". If either string is length 0, use '@' for its missing char.
 //    lastChars("last", "chars") → "ls"
 //    lastChars("yo", "java") → "ya"
 //    lastChars("hi", "") → "h@"
@@ -1248,8 +1180,8 @@ public class codingBatKatas {
         return firstA + lastB;
     }
 
-
-//    Given two strings, append them together (known as "concatenation") and return the result. However, if the concatenation creates a double-char, then omit one of the chars, so "abc" and "cat" yields "abcat".
+//    Given two strings, append them together (known as "concatenation") and return the result. However, if the
+//    concatenation creates a double-char, then omit one of the chars, so "abc" and "cat" yields "abcat".
 //    conCat("abc", "cat") → "abcat"
 //    conCat("dog", "cat") → "dogcat"
 //    conCat("abc", "") → "abc"
@@ -1267,11 +1199,11 @@ public class codingBatKatas {
         if (a.substring(a.length() -1).equals(b.substring(0,1)) ) {
             return a + b.substring(1);
         }
-
         return a + b;
     }
 
-//    Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so "coding" yields "codign".
+//    Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so "coding"
+//    yields "codign".
 //    lastTwo("coding") → "codign"
 //    lastTwo("cat") → "cta"
 //    lastTwo("ab") → "ba"
@@ -1286,9 +1218,7 @@ public class codingBatKatas {
         String swapTwo = str.substring(str.length() -2, str.length() -1);
 
         return str.substring(0,str.length() -2) + swapOne + swapTwo;
-
     }
-
 
 //    Given a string, if the string begins with "red" or "blue" return that color string, otherwise return the empty string.
 //    seeColor("redxx") → "red"
@@ -1322,12 +1252,12 @@ public class codingBatKatas {
         if ( str.substring(0,2).equals(str.substring(str.length()-2)) ) {
             return true;
         }
-
         return false;
     }
 
-
-//    Given two strings, append them together (known as "concatenation") and return the result. However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string. So "Hello" and "Hi" yield "loHi". The strings may be any length.
+//    Given two strings, append them together (known as "concatenation") and return the result. However, if the strings
+//    are different lengths, omit chars from the longer string so it is the same length as the shorter string. So "Hello"
+//    and "Hi" yield "loHi". The strings may be any length.
 //    minCat("Hello", "Hi") → "loHi"
 //    minCat("Hello", "java") → "ellojava"
 //    minCat("java", "Hello") → "javaello"
@@ -1345,7 +1275,8 @@ public class codingBatKatas {
         }
     }
 
-//    Given a string, return a new string made of 3 copies of the first 2 chars of the original string. The string may be any length. If there are fewer than 2 chars, use whatever is there.
+//    Given a string, return a new string made of 3 copies of the first 2 chars of the original string. The string may be
+//    any length. If there are fewer than 2 chars, use whatever is there.
 //    extraFront("Hello") → "HeHeHe"
 //    extraFront("ab") → "ababab"
 //    extraFront("H") → "HHH"
@@ -1361,8 +1292,9 @@ public class codingBatKatas {
         return newString + newString + newString;
     }
 
-
-//    Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring at the beginning, so "HelloHe" yields "lloHe". The substring may overlap with itself, so "Hi" yields "". Otherwise, return the original string unchanged.
+//    Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring
+//    at the beginning, so "HelloHe" yields "lloHe". The substring may overlap with itself, so "Hi" yields "". Otherwise,
+//    return the original string unchanged.
 //    without2("HelloHe") → "lloHe"
 //    without2("HelloHi") → "HelloHi"
 //    without2("Hi") → ""
@@ -1379,8 +1311,8 @@ public class codingBatKatas {
         return str;
     }
 
-
-//    Given a string, return a version without the first 2 chars. Except keep the first char if it is 'a' and keep the second char if it is 'b'. The string may be any length. Harder than it looks.
+//    Given a string, return a version without the first 2 chars. Except keep the first char if it is 'a' and keep the
+//    second char if it is 'b'. The string may be any length. Harder than it looks.
 //    deFront("Hello") → "llo"
 //    deFront("java") → "va"
 //    deFront("away") → "aay"
@@ -1396,10 +1328,10 @@ public class codingBatKatas {
         } else {
             return str.substring(2);
         }
-
     }
 
-//    Given a string and a second "word" string, we'll say that the word matches the string if it appears at the front of the string, except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string. So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.
+//    Given a string and a second "word" string, we'll say that the word matches the string if it appears at the front
+//    of the string, except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string. So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.
 //    startWord("hippo", "hi") → "hi"
 //    startWord("hippo", "xip") → "hip"
 //    startWord("hippo", "i") → "h"
@@ -1416,8 +1348,8 @@ public class codingBatKatas {
         return "";
     }
 
-
-//    Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and otherwise return the string unchanged.
+//    Given a string, if the first or last chars are 'x', return the string without those 'x' chars, and otherwise
+//    return the string unchanged.
 //    withoutX("xHix") → "Hi"
 //    withoutX("xHi") → "Hi"
 //    withoutX("Hxix") → "Hxi"
@@ -1439,7 +1371,8 @@ public class codingBatKatas {
         }
     }
 
-//    Given a string, if one or both of the first 2 chars is 'x', return the string without those 'x' chars, and otherwise return the string unchanged. This is a little harder than it looks.
+//    Given a string, if one or both of the first 2 chars is 'x', return the string without those 'x' chars, and
+//    otherwise return the string unchanged. This is a little harder than it looks.
 //    withoutX2("xHi") → "Hi"
 //    withoutX2("Hxi") → "Hi"
 //    withoutX2("Hi") → "Hi"
@@ -1459,11 +1392,11 @@ public class codingBatKatas {
         } else {
             return str;
         }
-
     }
 
-
-//    Modify and return the given map as follows: if the key "a" has a value, set the key "b" to have that value, and set the key "a" to have the value "". Basically "b" is a bully, taking the value and replacing it with the empty string.
+//    Modify and return the given map as follows: if the key "a" has a value, set the key "b" to have that value, and
+//    set the key "a" to have the value "". Basically "b" is a bully, taking the value and replacing it with the empty
+//    string.
 //    mapBully({"a": "candy", "b": "dirt"}) → {"a": "", "b": "candy"}
 //    mapBully({"a": "candy"}) → {"a": "", "b": "candy"}
 //    mapBully({"a": "candy", "b": "carrot", "c": "meh"}) → {"a": "", "b": "candy", "c": "meh"}
@@ -1474,13 +1407,11 @@ public class codingBatKatas {
             map.put("b", map.get("a") );
             map.put("a", "");
         }
-
         return map;
-
     }
 
-
-//    Modify and return the given map as follows: if the key "a" has a value, set the key "b" to have that same value. In all cases remove the key "c", leaving the rest of the map unchanged.
+//    Modify and return the given map as follows: if the key "a" has a value, set the key "b" to have that same value.
+//    In all cases remove the key "c", leaving the rest of the map unchanged.
 //    mapShare({"a": "aaa", "b": "bbb", "c": "ccc"}) → {"a": "aaa", "b": "aaa"}
 //    mapShare({"b": "xyz", "c": "ccc"}) → {"b": "xyz"}
 //    mapShare({"a": "aaa", "c": "meh", "d": "hi"}) → {"a": "aaa", "b": "aaa", "d": "hi"}
@@ -1494,11 +1425,10 @@ public class codingBatKatas {
         map.remove("c");
 
         return map;
-
     }
 
-
-//    Modify and return the given map as follows: for this problem the map may or may not contain the "a" and "b" keys. If both keys are present, append their 2 string values together and store the result under the key "ab".
+//    Modify and return the given map as follows: for this problem the map may or may not contain the "a" and "b" keys.
+//    If both keys are present, append their 2 string values together and store the result under the key "ab".
 //    mapAB({"a": "Hi", "b": "There"}) → {"a": "Hi", "ab": "HiThere", "b": "There"}
 //    mapAB({"a": "Hi"}) → {"a": "Hi"}
 //    mapAB({"b": "There"}) → {"b": "There"}
@@ -1511,8 +1441,8 @@ public class codingBatKatas {
         return map;
     }
 
-
-//    Given a map of food keys and topping values, modify and return the map as follows: if the key "ice cream" is present, set its value to "cherry". In all cases, set the key "bread" to have the value "butter".
+//    Given a map of food keys and topping values, modify and return the map as follows: if the key "ice cream" is
+//    present, set its value to "cherry". In all cases, set the key "bread" to have the value "butter".
 //    topping1({"ice cream": "peanuts"}) → {"bread": "butter", "ice cream": "cherry"}
 //    topping1({}) → {"bread": "butter"}
 //    topping1({"pancake": "syrup"}) → {"bread": "butter", "pancake": "syrup"}
@@ -1527,8 +1457,9 @@ public class codingBatKatas {
         return map;
     }
 
-
-//    Given a map of food keys and their topping values, modify and return the map as follows: if the key "ice cream" has a value, set that as the value for the key "yogurt" also. If the key "spinach" has a value, change that value to "nuts".
+//    Given a map of food keys and their topping values, modify and return the map as follows: if the key "ice cream"
+//    has a value, set that as the value for the key "yogurt" also. If the key "spinach" has a value, change that value
+//    to "nuts".
 //    topping2({"ice cream": "cherry"}) → {"yogurt": "cherry", "ice cream": "cherry"}
 //    topping2({"spinach": "dirt", "ice cream": "cherry"}) → {"yogurt": "cherry", "spinach": "nuts", "ice cream": "cherry"}
 //    topping2({"yogurt": "salt"}) → {"yogurt": "salt"}
@@ -1545,8 +1476,9 @@ public class codingBatKatas {
         return map;
     }
 
-
-//    Given a map of food keys and topping values, modify and return the map as follows: if the key "potato" has a value, set that as the value for the key "fries". If the key "salad" has a value, set that as the value for the key "spinach".
+//    Given a map of food keys and topping values, modify and return the map as follows: if the key "potato" has a value,
+//    set that as the value for the key "fries". If the key "salad" has a value, set that as the value for the key
+//    "spinach".
 //     topping3({"potato": "ketchup"}) → {"potato": "ketchup", "fries": "ketchup"}
 //    topping3({"potato": "butter"}) → {"potato": "butter", "fries": "butter"}
 //    topping3({"salad": "oil", "potato": "ketchup"}) → {"spinach": "oil", "salad": "oil", "potato": "ketchup", "fries": "ketchup"}
@@ -1562,8 +1494,8 @@ public class codingBatKatas {
         return map;
     }
 
-
-//    Modify and return the given map as follows: if the keys "a" and "b" are both in the map and have equal values, remove them both.
+//    Modify and return the given map as follows: if the keys "a" and "b" are both in the map and have equal values,
+//    remove them both.
 //    mapAB2({"a": "aaa", "b": "aaa", "c": "cake"}) → {"c": "cake"}
 //    mapAB2({"a": "aaa", "b": "bbb"}) → {"a": "aaa", "b": "bbb"}
 //    mapAB2({"a": "aaa", "b": "bbb", "c": "aaa"}) → {"a": "aaa", "b": "bbb", "c": "aaa"}
@@ -1574,13 +1506,11 @@ public class codingBatKatas {
             map.remove("a");
             map.remove("b");
         }
-
         return map;
-
     }
 
-
-//    Modify and return the given map as follows: if exactly one of the keys "a" or "b" has a value in the map (but not both), set the other to have that same value in the map.
+//    Modify and return the given map as follows: if exactly one of the keys "a" or "b" has a value in the map
+//    (but not both), set the other to have that same value in the map.
 //    mapAB3({"a": "aaa", "c": "cake"}) → {"a": "aaa", "b": "aaa", "c": "cake"}
 //    mapAB3({"b": "bbb", "c": "cake"}) → {"a": "bbb", "b": "bbb", "c": "cake"}
 //    mapAB3({"a": "aaa", "b": "bbb", "c": "cake"}) → {"a": "aaa", "b": "bbb", "c": "cake"}
@@ -1595,8 +1525,9 @@ public class codingBatKatas {
         return map;
     }
 
-
-//    Modify and return the given map as follows: if the keys "a" and "b" have values that have different lengths, then set "c" to have the longer value. If the values exist and have the same length, change them both to the empty string in the map.
+//    Modify and return the given map as follows: if the keys "a" and "b" have values that have different lengths,
+//    then set "c" to have the longer value. If the values exist and have the same length, change them both to the
+//    empty string in the map.
 //    mapAB4({"a": "aaa", "b": "bb", "c": "cake"}) → {"a": "aaa", "b": "bb", "c": "aaa"}
 //    mapAB4({"a": "aa", "b": "bbb", "c": "cake"}) → {"a": "aa", "b": "bbb", "c": "bbb"}
 //    mapAB4({"a": "aa", "b": "bbb"}) → {"a": "aa", "b": "bbb", "c": "bbb"}
@@ -1616,7 +1547,8 @@ public class codingBatKatas {
         return map;
     }
 
-//    Given an array of ints, return true if 6 appears as either the first or last element in the array. The array will be length 1 or more.
+//    Given an array of ints, return true if 6 appears as either the first or last element in the array. The array
+//    will be length 1 or more.
 //    firstLast6([1, 2, 6]) → true
 //    firstLast6([6, 1, 2, 3]) → true
 //    firstLast6([13, 6, 1, 2, 3]) → false
@@ -1628,7 +1560,6 @@ public class codingBatKatas {
         }
         return false;
     }
-
 
 //    Given an array of ints, return true if the array is length 1 or more, and the first element and the last element are equal.
 //    sameFirstLast([1, 2, 3]) → false
@@ -1643,7 +1574,6 @@ public class codingBatKatas {
         return false;
     }
 
-
 //    Return an int array length 3 containing the first 3 digits of pi, {3, 1, 4}.
 //    makePi() → [3, 1, 4]
 
@@ -1652,11 +1582,11 @@ public class codingBatKatas {
         int[] pi = new int[] {3,1,4};
 
         return pi;
-
     }
 
 
-//    Given 2 arrays of ints, a and b, return true if they have the same first element or they have the same last element. Both arrays will be length 1 or more.
+//    Given 2 arrays of ints, a and b, return true if they have the same first element or they have the same last element.
+//    Both arrays will be length 1 or more.
 //    commonEnd([1, 2, 3], [7, 3]) → true
 //    commonEnd([1, 2, 3], [7, 3, 2]) → false
 //    commonEnd([1, 2, 3], [1, 3]) → true
@@ -1669,7 +1599,6 @@ public class codingBatKatas {
         return false;
     }
 
-
 //    Given an array of ints length 3, return the sum of all the elements.
 //    sum3([1, 2, 3]) → 6
 //    sum3([5, 11, 2]) → 18
@@ -1679,7 +1608,6 @@ public class codingBatKatas {
 
         return nums[0] + nums[1] + nums[2];
     }
-
 
 //    Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2, 3} yields {2, 3, 1}.
 //    rotateLeft3([1, 2, 3]) → [2, 3, 1]
@@ -1693,7 +1621,6 @@ public class codingBatKatas {
         return rotated;
     }
 
-
 //    Given an array of ints length 3, return a new array with the elements in reverse order, so {1, 2, 3} becomes {3, 2, 1}.
 //    reverse3([1, 2, 3]) → [3, 2, 1]
 //    reverse3([5, 11, 9]) → [9, 11, 5]
@@ -1705,8 +1632,8 @@ public class codingBatKatas {
         return reverse;
     }
 
-
-//    Given an array of ints length 3, figure out which is larger, the first or last element in the array, and set all the other elements to be that value. Return the changed array.
+//    Given an array of ints length 3, figure out which is larger, the first or last element in the array, and set all
+//    the other elements to be that value. Return the changed array.
 //    maxEnd3([1, 2, 3]) → [3, 3, 3]
 //    maxEnd3([11, 5, 9]) → [11, 11, 11]
 //    maxEnd3([2, 11, 3]) → [3, 3, 3]
@@ -1722,8 +1649,8 @@ public class codingBatKatas {
         return changed;
     }
 
-
-//    Given an array of ints, return the sum of the first 2 elements in the array. If the array length is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.
+//    Given an array of ints, return the sum of the first 2 elements in the array. If the array length is less than 2,
+//    just sum up the elements that exist, returning 0 if the array is length 0.
 //    sum2([1, 2, 3]) → 3
 //    sum2([1, 1]) → 2
 //    sum2([1, 1, 1, 1]) → 2
@@ -1738,7 +1665,6 @@ public class codingBatKatas {
         }
     }
 
-
 //    Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle elements.
 //    middleWay([1, 2, 3], [4, 5, 6]) → [2, 5]
 //    middleWay([7, 7, 7], [3, 8, 0]) → [7, 8]
@@ -1750,8 +1676,8 @@ public class codingBatKatas {
         return middle;
     }
 
-
-//    Given an array of ints, return a new array length 2 containing the first and last elements from the original array. The original array will be length 1 or more.
+//    Given an array of ints, return a new array length 2 containing the first and last elements from the original array.
+//    The original array will be length 1 or more.
 //    makeEnds([1, 2, 3]) → [1, 3]
 //    makeEnds([1, 2, 3, 4]) → [1, 4]
 //    makeEnds([7, 4, 6, 2]) → [7, 2]
@@ -1767,7 +1693,6 @@ public class codingBatKatas {
         return firstAndLast;
     }
 
-
 //    Given an int array length 2, return true if it contains a 2 or a 3.
 //    has23([2, 5]) → true
 //    has23([4, 3]) → true
@@ -1779,7 +1704,6 @@ public class codingBatKatas {
         }
         return false;
     }
-
 
 //    Given an int array length 2, return true if it does not contain a 2 or 3.
 //    no23([4, 5]) → true
@@ -1793,8 +1717,9 @@ public class codingBatKatas {
         return false;
     }
 
-
-//    Given an int array, return a new array with double the length where its last element is the same as the original array, and all the other elements are 0. The original array will be length 1 or more. Note: by default, a new int array contains all 0's.
+//    Given an int array, return a new array with double the length where its last element is the same as the original
+//    array, and all the other elements are 0. The original array will be length 1 or more. Note: by default, a new int
+//    array contains all 0's.
 //    makeLast([4, 5, 6]) → [0, 0, 0, 0, 0, 6]
 //    makeLast([1, 2]) → [0, 0, 0, 2]
 //    makeLast([3]) → [0, 3]
@@ -1806,9 +1731,7 @@ public class codingBatKatas {
         doubler[doubler.length-1] = nums[nums.length-1];
 
         return doubler;
-
     }
-
 
 //    Given an int array, return true if the array contains 2 twice, or 3 twice. The array will be length 0, 1, or 2.
 //    double23([2, 2]) → true
@@ -1837,11 +1760,10 @@ public class codingBatKatas {
         } else {
             return false;
         }
-
     }
 
-
-//    Given an int array length 3, if there is a 2 in the array immediately followed by a 3, set the 3 element to 0. Return the changed array.
+//    Given an int array length 3, if there is a 2 in the array immediately followed by a 3, set the 3 element to 0.
+//    Return the changed array.
 //    fix23([1, 2, 3]) → [1, 2, 0]
 //    fix23([2, 3, 5]) → [2, 0, 5]
 //    fix23([1, 2, 1]) → [1, 2, 1]
@@ -1855,7 +1777,6 @@ public class codingBatKatas {
         }
         return nums;
     }
-
 
 //    Start with 2 int arrays, a and b, of any length. Return how many of the arrays have 1 as their first element.
 //    start1([1, 2, 3], [1, 3]) → 2
@@ -1874,8 +1795,8 @@ public class codingBatKatas {
         return counter;
     }
 
-
-//    Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each array. Return the array which has the largest sum. In event of a tie, return a.
+//    Start with 2 int arrays, a and b, each length 2. Consider the sum of the values in each array. Return the array
+//    which has the largest sum. In event of a tie, return a.
 //    biggerTwo([1, 2], [3, 4]) → [3, 4]
 //    biggerTwo([3, 4], [1, 2]) → [3, 4]
 //    biggerTwo([1, 1], [1, 2]) → [1, 2]
@@ -1906,7 +1827,8 @@ public class codingBatKatas {
         return a;
     }
 
-//    Given an array of ints of even length, return a new array length 2 containing the middle two elements from the original array. The original array will be length 2 or more.
+//    Given an array of ints of even length, return a new array length 2 containing the middle two elements from the
+//    original array. The original array will be length 2 or more.
 //    makeMiddle([1, 2, 3, 4]) → [2, 3]
 //    makeMiddle([7, 1, 2, 3, 4, 9]) → [2, 3]
 //    makeMiddle([1, 2]) → [1, 2]
@@ -1923,7 +1845,6 @@ public class codingBatKatas {
         return newArray;
     }
 
-
 //    Given 2 int arrays, each length 2, return a new array length 4 containing all their elements.
 //    plusTwo([1, 2], [3, 4]) → [1, 2, 3, 4]
 //    plusTwo([4, 4], [2, 2]) → [4, 4, 2, 2]
@@ -1936,8 +1857,8 @@ public class codingBatKatas {
         return bigGuy;
     }
 
-
-//    Given an array of ints, swap the first and last elements in the array. Return the modified array. The array length will be at least 1.
+//    Given an array of ints, swap the first and last elements in the array. Return the modified array. The array length
+//    will be at least 1.
 //    swapEnds([1, 2, 3, 4]) → [4, 2, 3, 1]
 //    swapEnds([1, 2, 3]) → [3, 2, 1]
 //    swapEnds([8, 6, 7, 9, 5]) → [5, 6, 7, 9, 8]
@@ -1955,8 +1876,8 @@ public class codingBatKatas {
         return newArray;
     }
 
-
-//    Given an array of ints of odd length, return a new array length 3 containing the elements from the middle of the array. The array length will be at least 3.
+//    Given an array of ints of odd length, return a new array length 3 containing the elements from the middle of the
+//    array. The array length will be at least 3.
 //    midThree([1, 2, 3, 4, 5]) → [2, 3, 4]
 //    midThree([8, 6, 7, 5, 3, 0, 9]) → [7, 5, 3]
 //    midThree([1, 2, 3]) → [1, 2, 3]
@@ -1974,8 +1895,8 @@ public class codingBatKatas {
         return newArray;
     }
 
-
-//    Given an array of ints of odd length, look at the first, last, and middle values in the array and return the largest. The array length will be a least 1.
+//    Given an array of ints of odd length, look at the first, last, and middle values in the array and return the
+//    largest. The array length will be a least 1.
 //    maxTriple([1, 2, 3]) → 3
 //    maxTriple([1, 5, 3]) → 5
 //    maxTriple([5, 2, 3]) → 5
@@ -1993,8 +1914,8 @@ public class codingBatKatas {
         return largest;
     }
 
-
-//    Given an int array of any length, return a new array of its first 2 elements. If the array is smaller than length 2, use whatever elements are present.
+//    Given an int array of any length, return a new array of its first 2 elements. If the array is smaller than length
+//    2, use whatever elements are present.
 //    frontPiece([1, 2, 3]) → [1, 2]
 //    frontPiece([1, 2]) → [1, 2]
 //    frontPiece([1]) → [1]
@@ -2009,8 +1930,8 @@ public class codingBatKatas {
         return firstTwo;
     }
 
-
-//    We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1. Return true if the given array contains an unlucky 1 in the first 2 or last 2 positions in the array.
+//    We'll say that a 1 immediately followed by a 3 in an array is an "unlucky" 1. Return true if the given array
+//    contains an unlucky 1 in the first 2 or last 2 positions in the array.
 //    unlucky1([1, 3, 4, 5]) → true
 //    unlucky1([2, 1, 3, 4, 5]) → true
 //    unlucky1([1, 1, 1]) → false
@@ -2034,8 +1955,9 @@ public class codingBatKatas {
         return isUnlucky;
     }
 
-
-//    Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the elements from a followed by the elements from b. The arrays may be any length, including 0, but there will be 2 or more elements available between the 2 arrays.
+//    Given 2 int arrays, a and b, return a new array length 2 containing, as much as will fit, the elements from a
+//    followed by the elements from b. The arrays may be any length, including 0, but there will be 2 or more elements
+//    available between the 2 arrays.
 //    make2([4, 5], [1, 2, 3]) → [4, 5]
 //    make2([4], [1, 2, 3]) → [4, 1]
 //    make2([], [1, 2]) → [1, 2]
@@ -2061,12 +1983,11 @@ public class codingBatKatas {
             newArray[1] = b[0];
             return newArray;
         }
-
         return newArray;
     }
 
-
-//    Given 2 int arrays, a and b, of any length, return a new array with the first element of each array. If either array is length 0, ignore that array.
+//    Given 2 int arrays, a and b, of any length, return a new array with the first element of each array. If either
+//    array is length 0, ignore that array.
 //    front11([1, 2, 3], [7, 9, 8]) → [1, 7]
 //    front11([1], [2]) → [1, 2]
 //    front11([1, 7], []) → [1]
@@ -2113,10 +2034,8 @@ public class codingBatKatas {
         for(String string : strings) {
             zeros.put(string, 0);
         }
-
         return zeros;
     }
-
 
 //    Given an array of strings, return a Map<String, Integer> containing a key for every different string in the array, and the value is that string's length.
 //    wordLen(["a", "bb", "a", "bb"]) → {"bb": 2, "a": 1}
@@ -2150,8 +2069,8 @@ public class codingBatKatas {
         return map;
     }
 
-
-//    The classic word-count algorithm: given an array of strings, return a Map<String, Integer> with a key for each different string, with the value the number of times that string appears in the array.
+//    The classic word-count algorithm: given an array of strings, return a Map<String, Integer> with a key for each
+//    different string, with the value the number of times that string appears in the array.
 //    wordCount(["a", "b", "a", "c", "b"]) → {"a": 2, "b": 2, "c": 1}
 //    wordCount(["c", "b", "a"]) → {"a": 1, "b": 1, "c": 1}
 //    wordCount(["c", "c", "c", "c"]) → {"c": 4}
@@ -2171,8 +2090,8 @@ public class codingBatKatas {
         return map;
     }
 
-
-//    Given an array of non-empty strings, return a Map<String, String> with a key for every different first character seen, with the value of all the strings starting with that character appended together in the order they appear in the array.
+//    Given an array of non-empty strings, return a Map<String, String> with a key for every different first character
+//    seen, with the value of all the strings starting with that character appended together in the order they appear in the array.
 //    firstChar(["salt", "tea", "soda", "toast"]) → {"s": "saltsoda", "t": "teatoast"}
 //    firstChar(["aa", "bb", "cc", "aAA", "cCC", "d"]) → {"a": "aaaAA", "b": "bb", "c": "cccCC", "d": "d"}
 //    firstChar([]) → {}
@@ -2191,12 +2110,11 @@ public class codingBatKatas {
                 map.put(firstLetter,word);
             }
         }
-
         return map;
     }
 
-
-//    Loop over the given array of strings to build a result string like this: when a string appears the 2nd, 4th, 6th, etc. time in the array, append the string to the result. Return the empty string if no string appears a 2nd time.
+//    Loop over the given array of strings to build a result string like this: when a string appears the 2nd, 4th, 6th,
+//    etc. time in the array, append the string to the result. Return the empty string if no string appears a 2nd time.
 //    wordAppend(["a", "b", "a"]) → "a"
 //    wordAppend(["a", "b", "a", "c", "a", "d", "a"]) → "aa"
 //    wordAppend(["a", "", "a"]) → "a"
@@ -2220,12 +2138,11 @@ public class codingBatKatas {
                 map.put(string, 1);
             }
         }
-
         return newString;
     }
 
-
-//    Given an array of strings, return a Map<String, Boolean> where each different string is a key and its value is true if that string appears 2 or more times in the array.
+//    Given an array of strings, return a Map<String, Boolean> where each different string is a key and its value is
+//    true if that string appears 2 or more times in the array.
 //    wordMultiple(["a", "b", "a", "c", "b"]) → {"a": true, "b": true, "c": false}
 //    wordMultiple(["c", "b", "a"]) → {"a": false, "b": false, "c": false}
 //    wordMultiple(["c", "c", "c", "c"]) → {"c": true}
@@ -2243,14 +2160,6 @@ public class codingBatKatas {
         }
         return map;
     }
-
-
-
-
-
-
-
-
 
 
 
