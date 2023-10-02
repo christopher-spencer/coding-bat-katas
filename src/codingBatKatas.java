@@ -2161,6 +2161,44 @@ so "cat" yields "tcatt". The original string will be length 1 or more.
         return map;
     }
 
+//    We'll say that 2 strings "match" if they are non-empty and their first chars are the same. Loop over and then
+//    return the given array of non-empty strings as follows: if a string matches an earlier string in the array, swap
+//    the 2 strings in the array. When a position in the array has been swapped, it no longer matches anything. Using a
+//    map, this can be solved making just one pass over the array. More difficult than it looks.
+//    allSwap(["ab", "ac"]) → ["ac", "ab"]
+//    allSwap(["ax", "bx", "cx", "cy", "by", "ay", "aaa", "azz"]) → ["ay", "by", "cy", "cx", "bx", "ax", "azz", "aaa"]
+//    allSwap(["ax", "bx", "ay", "by", "ai", "aj", "bx", "by"]) → ["ay", "by", "ax", "bx", "aj", "ai", "by", "bx"]
+
+    public String[] allSwap(String[] strings) {
+
+        //use map to store index and string (substring)
+        //check if string.substring exists on map, swap indexes if so
+        //so need to track prior index
+        //then remove from the map
+        Map<String, Integer> firstCharIndexMap = new HashMap<>();
+
+        for (int i = 0; i < strings.length; i++) {
+            String firstChar = strings[i].substring(0, 1);
+
+            if (firstCharIndexMap.containsKey(firstChar)) {
+                int swapIndex = firstCharIndexMap.get(firstChar);
+
+                if (swapIndex != i) {
+                    String temp = strings[i];
+                    strings[i] = strings[swapIndex];
+                    strings[swapIndex] = temp;
+
+                    firstCharIndexMap.remove(firstChar);
+                }
+            } else {
+                firstCharIndexMap.put(firstChar, i);
+            }
+        }
+        return strings;
+    }
+
+
+
 
 
 }
