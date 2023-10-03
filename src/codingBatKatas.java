@@ -2585,13 +2585,27 @@ public int caughtSpeeding(int speed, boolean isBirthday) {
         }
     }
 
-//    Given three ints, a b c, return true if two or more of them have the same rightmost digit. The ints are non-negative. Note: the % "mod" operator computes the remainder, e.g. 17 % 10 is 7.
+//    Given three ints, a b c, return true if two or more of them have the same rightmost digit. The ints are non-negative.
+//    Note: the % "mod" operator computes the remainder, e.g. 17 % 10 is 7.
 //    lastDigit(23, 19, 13) → true
 //    lastDigit(23, 19, 12) → false
 //    lastDigit(23, 19, 3) → true
 
     public boolean lastDigit(int a, int b, int c) {
         if (a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+//    Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+//    lessBy10(1, 7, 11) → true
+//    lessBy10(1, 7, 10) → false
+//    lessBy10(11, 1, 7) → true
+
+    public boolean lessBy10(int a, int b, int c) {
+        if (a + 9 < b || a + 9 < c || b + 9 < a || b + 9 < c || c + 9 < a || c + 9 < b) {
             return true;
         } else {
             return false;
