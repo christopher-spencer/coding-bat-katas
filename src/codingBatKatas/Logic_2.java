@@ -37,7 +37,8 @@ public class Logic_2 {
         }
     }
 
-//    Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count towards the sum and values to its right do not count. So for example, if b is 13, then both b and c do not count.
+//    Given 3 int values, a b c, return their sum. However, if one of the values is 13 then it does not count towards
+//    the sum and values to its right do not count. So for example, if b is 13, then both b and c do not count.
 //    luckySum(1, 2, 3) → 6
 //    luckySum(1, 2, 13) → 3
 //    luckySum(1, 13, 3) → 1
@@ -56,7 +57,11 @@ public class Logic_2 {
         }
     }
 
-//    Given 3 int values, a b c, return their sum. However, if any of the values is a teen -- in the range 13..19 inclusive -- then that value counts as 0, except 15 and 16 do not count as a teens. Write a separate helper "public int fixTeen(int n) {"that takes in an int value and returns that value fixed for the teen rule. In this way, you avoid repeating the teen code 3 times (i.e. "decomposition"). Define the helper below and at the same indent level as the main noTeenSum().
+//    Given 3 int values, a b c, return their sum. However, if any of the values is a teen -- in the range 13..19
+//    inclusive -- then that value counts as 0, except 15 and 16 do not count as a teens. Write a separate helper
+//    "public int fixTeen(int n) {"that takes in an int value and returns that value fixed for the teen rule. In this
+//    way, you avoid repeating the teen code 3 times (i.e. "decomposition"). Define the helper below and at the same
+//    indent level as the main noTeenSum().
 //    noTeenSum(1, 2, 3) → 6
 //    noTeenSum(2, 13, 1) → 3
 //    noTeenSum(2, 1, 14) → 3
@@ -80,9 +85,29 @@ public class Logic_2 {
         }
     }
 
+//    For this problem, we'll round an int value up to the next multiple of 10 if its rightmost digit is 5 or more, so
+//            15 rounds up to 20. Alternately, round down to the previous multiple of 10 if its rightmost digit is less
+//    than 5, so 12 rounds down to 10. Given 3 ints, a b c, return the sum of their rounded values. To avoid code repetition,
+//    write a separate helper "public int round10(int num) {" and call it 3 times. Write the helper entirely below and at
+//    the same indent level as roundSum().
+//    roundSum(16, 17, 18) → 60
+//    roundSum(12, 13, 14) → 30
+//    roundSum(6, 4, 4) → 10
 
+    public int roundSum(int a, int b, int c) {
+        int sum = round10(a) + round10(b) + round10(c);
 
+        return sum;
+    }
 
+    public int round10(int num) {
+        int remainder = num % 10;
+        if (remainder >= 5) {
+            return num + (10 - remainder);
+        } else {
+            return num - remainder;
+        }
+    }
 
 
 
