@@ -134,8 +134,7 @@ public class String_2 {
 
     public boolean xyBalance(String str) {
 
-        //If lastX and/or lastY == -1 after for loop,
-        //there are no 'x' and/or 'y' characters in str
+        //If lastX and/or lastY == -1 after for loop, there are no 'x' and/or 'y' characters in str
         int lastX = -1;
         int lastY = -1;
 
