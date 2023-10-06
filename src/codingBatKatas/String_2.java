@@ -146,7 +146,6 @@ public class String_2 {
                 lastY = i;
             }
         }
-
         return lastX <= lastY;
     }
 
