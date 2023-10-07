@@ -13,7 +13,6 @@ public class String_2 {
         for (int i = 0; i < str.length(); i++) {
             newString += str.substring(i,i+1) + str.substring(i,i+1);
         }
-
         return newString;
     }
 
@@ -85,7 +84,6 @@ public class String_2 {
         if (a.endsWith(b) || b.endsWith(a)) {
             return true;
         }
-
         return false;
     }
 
@@ -148,6 +146,34 @@ public class String_2 {
         return lastX <= lastY;
     }
 
+//    Given two strings, a and b, create a bigger string made of the first char of a, the first char of b, the second char
+//    of a, the second char of b, and so on. Any leftover chars go at the end of the result.
+//    mixString("abc", "xyz") → "axbycz"
+//    mixString("Hi", "There") → "HTihere"
+//    mixString("xxxx", "There") → "xTxhxexre"
+
+    public String mixString(String a, String b) {
+        String newString = "";
+        int smallest = Math.min(a.length(),b.length());
+
+        if (a.equals("")) {
+            return b;
+        } else if (b.equals("")) {
+            return a;
+        }
+
+        for (int i = 0; i < smallest; i++) {
+            newString+= a.substring(i,i+1);
+            newString+= b.substring(i,i+1);
+        }
+
+        if (a.length() == smallest) {
+            newString += b.substring(smallest);
+        } else if (b.length() == smallest) {
+            newString += a.substring(smallest);
+        }
+        return newString;
+    }
 
 
 
