@@ -264,7 +264,8 @@ public class String_2 {
         }
     }
 
-//    A sandwich is two pieces of bread with something in between. Return the string that is between the first and last appearance of "bread" in the given string, or return the empty string "" if there are not two pieces of bread.
+//    A sandwich is two pieces of bread with something in between. Return the string that is between the first and last
+//    appearance of "bread" in the given string, or return the empty string "" if there are not two pieces of bread.
 //    getSandwich("breadjambread") → "jam"
 //    getSandwich("xxbreadjambreadyy") → "jam"
 //    getSandwich("xxbreadyy") → ""
@@ -280,7 +281,8 @@ public class String_2 {
         }
     }
 
-//    Returns true if for every '*' (star) in the string, if there are chars both immediately before and after the star, they are the same.
+//    Returns true if for every '*' (star) in the string, if there are chars both immediately before and after the star,
+//    they are the same.
 //    sameStarChar("xy*yzz") → true
 //    sameStarChar("xy*zzz") → false
 //    sameStarChar("*xa*az") → true
@@ -296,7 +298,23 @@ public class String_2 {
         return true;
     }
 
+//    Given a string, compute a new string by moving the first char to come after the next two chars, so "abc" yields
+//    "bca". Repeat this process for each subsequent group of 3 chars, so "abcdef" yields "bcaefd". Ignore any group of
+//    fewer than 3 chars at the end.
+//    oneTwo("abc") → "bca"
+//    oneTwo("tca") → "cat"
+//    oneTwo("tcagdo") → "catdog"
 
+    public String oneTwo(String str) {
+        String newString = "";
+        int remainder = str.length() % 3;
+
+        for (int i = 0; i < str.length()-remainder;i+=3) {
+            newString += str.substring(i+1,i+3);
+            newString += str.substring(i,i+1);
+        }
+        return newString;
+    }
 
 
 
