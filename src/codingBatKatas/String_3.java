@@ -71,6 +71,32 @@ public int countYZ(String str) {
         return newString;
     }
 
+//    Given a string, return true if the number of appearances of "is" anywhere in the string is equal to the number of
+//    appearances of "not" anywhere in the string (case sensitive).
+//    equalIsNot("This is not") → false
+//    equalIsNot("This is notnot") → true
+//    equalIsNot("noisxxnotyynotxisi") → true
+
+    public boolean equalIsNot(String str) {
+        int counterIs = 0;
+        int counterNot = 0;
+
+        for (int i = 0; i < str.length()-2; i++) {
+            if (str.substring(i,i+3).equals("not")) {
+                counterNot++;
+            }
+        }
+
+        for (int j = 0; j < str.length()-1; j++) {
+            if (str.substring(j,j+2).equals("is")) {
+                counterIs++;
+            }
+        }
+        return counterIs == counterNot;
+    }
+
+
+
 
 
 
