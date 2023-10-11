@@ -40,6 +40,37 @@ public int countYZ(String str) {
     return counter;
 }
 
+//    Given two strings, base and remove, return a version of the base string where all instances of the remove string have
+//    been removed (not case sensitive). You may assume that the remove string is length 1 or more. Remove only non-overlapping
+//    instances, so with "xxx" removing "xx" leaves "x".
+//    withoutString("Hello there", "llo") → "He there"
+//    withoutString("Hello there", "e") → "Hllo thr"
+//    withoutString("Hello there", "x") → "Hello there"
+
+    public String withoutString(String base, String remove) {
+        String newString = "";
+        int i = 0;
+        int baseLength = base.length();
+        int removeLength = remove.length();
+
+        while (i < baseLength) {
+            // Find the next occurrence of 'remove' in 'base' (case-insensitive)
+            int removeIndex = base.toLowerCase().indexOf(remove.toLowerCase(), i);
+
+            if (removeIndex == -1) {
+                // No more occurrences found, copy the remaining characters
+                newString += base.substring(i);
+                break;
+            } else {
+                // Append characters from 'i' to 'index' in 'base' to 'result'
+                newString += base.substring(i, removeIndex);
+                // Move 'i' past the matched part
+                i = removeIndex + removeLength;
+            }
+        }
+        return newString;
+    }
+
 
 
 
