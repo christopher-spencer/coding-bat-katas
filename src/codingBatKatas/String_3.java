@@ -95,6 +95,31 @@ public int countYZ(String str) {
         return counterIs == counterNot;
     }
 
+//    We'll say that a lowercase 'g' in a string is "happy" if there is another 'g' immediately to its left or right.
+//    Return true if all the g's in the given string are happy.
+//    gHappy("xxggxx") → true
+//    gHappy("xxgxx") → false
+//    gHappy("xxggyygxx") → false
+
+    public boolean gHappy(String str) {
+        if (str.equals("")) {
+            return true;
+        }
+        if (str.length() < 2) {
+            return false;
+        }
+
+        if (str.substring(str.length()-1).equals("g") && !str.substring(str.length()-2,str.length()-1).equals("g")) {
+            return false;
+        }
+
+        for (int i = 1; i < str.length()-1; i++) {
+            if (str.substring(i,i+1).equals("g") && !str.substring(i-1,i).equals("g") && !str.substring(i+1,i+2).equals("g")) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 
