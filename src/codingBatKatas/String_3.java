@@ -166,7 +166,19 @@ public int countYZ(String str) {
 //    sameEnds("xx") → "x"
 //    sameEnds("xxx") → "x"
 
-    
+    public String sameEnds(String string) {
+        String newString = "";
+
+        for (int i = 1; i <= string.length()/2; i++) {
+            String beginning = string.substring(0,i);
+            String end = string.substring(string.length()-i);
+
+            if (beginning.equals(end)) {
+                newString = beginning;
+            }
+        }
+        return newString;
+    }
 
 
 
