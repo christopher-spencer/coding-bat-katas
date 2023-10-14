@@ -180,9 +180,31 @@ public int countYZ(String str) {
         return newString;
     }
 
+//    Given a string, look for a mirror image (backwards) string at both the beginning and end of the given string. In
+//    other words, zero or more characters at the very begining of the given string, and at the very end of the string in
+//    reverse order (possibly overlapping). For example, the string "abXYZba" has the mirror end "ab".
+//    mirrorEnds("abXYZba") → "ab"
+//    mirrorEnds("abca") → "a"
+//    mirrorEnds("aba") → "aba"
 
+    public String mirrorEnds(String string) {
+        String newString = "";
 
+        for (int i = 1; i <= string.length(); i++) {
+            String beginning = string.substring(0, i);
+            String end = string.substring(string.length() - i);
+            String reverseEnd = "";
 
+            for (int j = end.length() - 1; j >= 0; j--) {
+                reverseEnd += end.substring(j, j + 1);
+            }
+
+            if (beginning.equals(reverseEnd)) {
+                newString = beginning;
+            }
+        }
+        return newString;
+    }
 
 
 
