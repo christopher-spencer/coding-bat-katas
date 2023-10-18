@@ -102,8 +102,4 @@ public class Functional_2 {
         return nums;
     }
 
-
-
-
-
 }
