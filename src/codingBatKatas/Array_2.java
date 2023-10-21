@@ -392,7 +392,32 @@ public class Array_2 {
         return threeCounter == 3;
     }
 
+//    Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+//    twoTwo([4, 2, 2, 3]) → true
+//    twoTwo([2, 2, 4]) → true
+//    twoTwo([2, 2, 4, 2]) → false
 
+    public boolean twoTwo(int[] nums) {
+
+        if (nums.length < 2) {
+            if (nums.length == 1 && nums[0] == 2) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        if (nums[nums.length-1] == 2 && nums[nums.length-2] != 2) {
+            return false;
+        }
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i-1] != 2 && nums[i] == 2 && (i < nums.length && nums[i+1] != 2)) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 
