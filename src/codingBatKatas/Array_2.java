@@ -593,7 +593,30 @@ public class Array_2 {
 //    notAlone([1, 2, 3, 2, 5, 2], 2) → [1, 3, 3, 5, 5, 2]
 //    notAlone([3, 4], 3) → [3, 4]
 
-    
+    public int[] notAlone(int[] nums, int val) {
+        boolean isAlone = false;
+        int[] newArray = new int[nums.length];
+
+        if (nums.length < 1) {
+            return nums;
+        }
+
+        newArray[0] = nums[0];
+        newArray[nums.length-1] = nums[nums.length-1];
+
+        for (int i = 1; i < nums.length-1; i++) {
+            if (nums[i] == val) {
+                if (nums[i-1] != val && nums[i+1] != val) {
+                    newArray[i] = Math.max(nums[i-1],nums[i+1]);
+                } else {
+                    newArray[i] = nums[i];
+                }
+            } else {
+                newArray[i] = nums[i];
+            }
+        }
+        return newArray;
+    }
 
 
 
