@@ -625,6 +625,25 @@ public class Array_2 {
 //    zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
 //    zeroFront([1, 0]) → [0, 1]
 
+    public int[] zeroFront(int[] nums) {
+        int[] newArray = new int[nums.length];
+        int zeroIndex = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                newArray[zeroIndex] = 0;
+                zeroIndex++;
+            }
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 0) {
+                newArray[zeroIndex] = nums[i];
+                zeroIndex++;
+            }
+        }
+        return newArray;
+    }
 
 
 
