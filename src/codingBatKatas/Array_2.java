@@ -537,7 +537,24 @@ public class Array_2 {
 //    pre4([3, 1, 4]) → [3, 1]
 //    pre4([1, 4, 4]) → [1]
 
+    public int[] pre4(int[] nums) {
+        int indexCounter = 0;
 
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != 4) {
+                indexCounter++;
+            } else {
+                break;
+            }
+        }
+
+        int[] newArray = new int[indexCounter];
+
+        for (int j = 0; j < indexCounter; j++) {
+            newArray[j] = nums[j];
+        }
+        return newArray;
+    }
 
 
 
