@@ -563,7 +563,29 @@ public class Array_2 {
 //    post4([4, 1, 4, 2]) → [2]
 //    post4([4, 4, 1, 2, 3]) → [1, 2, 3]
 
-    
+    public int[] post4(int[] nums) {
+        int indexCounter = 0;
+        int index4 = 0;
+        int newArrayIndexCounter = 1;
+
+        for (int i = nums.length-1; i >= 0; i--) {
+            if (nums[i] != 4) {
+                indexCounter++;
+            } else {
+                index4 = i;
+                break;
+            }
+        }
+
+        int[] newArray = new int[indexCounter];
+
+        for (int j = 0; j < indexCounter; j++) {
+            newArray[j] = nums[index4 + newArrayIndexCounter];
+            newArrayIndexCounter++;
+        }
+        return newArray;
+    }
+
 
 
 
