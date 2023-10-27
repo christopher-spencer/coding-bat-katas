@@ -81,6 +81,41 @@ public class Array_3 {
         return nums;
     }
 
+//    Given a non-empty array, return true if there is a place to split the array so that the sum of the numbers on one
+//    side is equal to the sum of the numbers on the other side.
+//    canBalance([1, 1, 1, 2, 1]) → true
+//    canBalance([2, 1, 1, 2, 1]) → false
+//    canBalance([10, 10]) → true
+
+    public boolean canBalance(int[] nums) {
+        int beginSum = 0;
+        int endSum = 0;
+        int middle = (nums.length/2);
+        int allFirst = 0;
+        int lastIndex = 0;
+
+        for (int j = 0; j < nums.length; j++) {
+            if (nums[j] != nums[nums.length-1]) {
+                allFirst += nums[j];
+            } else {
+                lastIndex += nums[j];
+            }
+        }
+
+        if (allFirst == lastIndex) {
+            return true;
+        }
+
+        for (int i = 0; i < nums.length; i++) {
+            if (i < middle) {
+                beginSum += nums[i];
+            } else if (i > middle) {
+                endSum += nums[i];
+            }
+        }
+        return (endSum + nums[middle] == beginSum) || (beginSum + nums[middle] == endSum);
+    }
+
 
 
 
