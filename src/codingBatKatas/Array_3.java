@@ -116,6 +116,27 @@ public class Array_3 {
         return (endSum + nums[middle] == beginSum) || (beginSum + nums[middle] == endSum);
     }
 
+//    Given two arrays of ints sorted in increasing order, outer and inner, return true if all of the numbers in inner
+//    appear in outer. The best solution makes only a single "linear" pass of both arrays, taking advantage of the fact
+//    that both arrays are already in sorted order.
+//    linearIn([1, 2, 4, 6], [2, 4]) → true
+//    linearIn([1, 2, 4, 6], [2, 3, 4]) → false
+//    linearIn([1, 2, 4, 4, 6], [2, 4]) → true
+
+    public boolean linearIn(int[] outer, int[] inner) {
+        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+
+        for (int i = 0; i < outer.length; i++) {
+            map.put(outer[i],i);
+        }
+
+        for (int j = 0; j < inner.length; j++) {
+            if (!map.containsKey(inner[j])) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 
