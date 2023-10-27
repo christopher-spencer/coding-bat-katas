@@ -138,7 +138,29 @@ public class Array_3 {
         return true;
     }
 
+//    Given n>=0, create an array length n*n with the following pattern, shown here for n=3 : {0, 0, 1,    0, 2, 1,    3, 2, 1}
+//    (spaces added to show the 3 groups).
+//    squareUp(3) → [0, 0, 1, 0, 2, 1, 3, 2, 1]
+//    squareUp(2) → [0, 1, 2, 1]
+//    squareUp(4) → [0, 0, 0, 1, 0, 0, 2, 1, 0, 3, 2, 1, 4, 3, 2, 1]
 
+    public int[] squareUp(int n) {
+        int[] squaredArray = new int[n*n];
+        int index = 0;
+
+        for (int block = 1; block <= n; block++) {
+
+            for (int zeroZeroCountDown = n; zeroZeroCountDown > 0; zeroZeroCountDown--) {
+                if (zeroZeroCountDown <= block) {
+                    squaredArray[index] = zeroZeroCountDown;
+                } else {
+                    squaredArray[index] = 0;
+                }
+                index++;
+            }
+        }
+        return squaredArray;
+    }
 
 
 
