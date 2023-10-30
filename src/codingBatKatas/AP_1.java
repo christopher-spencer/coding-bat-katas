@@ -403,6 +403,42 @@ public class AP_1 {
         }
     }
 
+//    Start with two arrays of strings, A and B, each with its elements in alphabetical order and without duplicates.
+//    Return a new array containing the first N elements from the two arrays. The result array should be in alphabetical
+//    order and without duplicates. A and B will both have a length which is N or more. The best "linear" solution makes a
+//    single pass over A and B, taking advantage of the fact that they are in alphabetical order, copying elements directly
+//    to the new array.
+//    mergeTwo(["a", "c", "z"], ["b", "f", "z"], 3) → ["a", "b", "c"]
+//    mergeTwo(["a", "c", "z"], ["c", "f", "z"], 3) → ["a", "c", "f"]
+//    mergeTwo(["f", "g", "z"], ["c", "f", "g"], 3) → ["c", "f", "g"]
+
+    public String[] mergeTwo(String[] a, String[] b, int n) {
+        String[] newString = new String[n];
+        int i = 0, j = 0, newStringIndex = 0;
+
+        while (newStringIndex < n) {
+            int stringsComparison = a[i].compareTo(b[j]);
+
+            if (stringsComparison <= 0) {
+                newString[newStringIndex] = a[i];
+                i++;
+            } else {
+                newString[newStringIndex] = b[j];
+                j++;
+            }
+
+            newStringIndex++;
+
+            if (i < a.length && a[i].equals(newString[newStringIndex - 1])) {
+                i++;
+            }
+
+            if (j < b.length && b[j].equals(newString[newStringIndex - 1])) {
+                j++;
+            }
+        }
+        return newString;
+    }
 
 
 
