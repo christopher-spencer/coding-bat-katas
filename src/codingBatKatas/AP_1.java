@@ -477,15 +477,4 @@ public class AP_1 {
         return counter;
     }
 
-
-
-
-
-
-
-
-
-
-
-
 }
