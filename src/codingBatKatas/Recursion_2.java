@@ -13,23 +13,19 @@ public class Recursion_2 {
 //    groupSum(0, [2, 4, 8], 9) → false
 
     public boolean groupSum(int start, int[] nums, int target) {
-        if (target == 0) {
-            return true;
-        }
 
         if (start >= nums.length) {
+            if (target == 0) {
+                return true;
+            }
             return false;
         }
 
         if (groupSum(start + 1, nums, target - nums[start])) {
             return true;
+        } else {
+            return (groupSum(start + 1, nums, target));
         }
-
-        if (groupSum(start + 1, nums, target)) {
-            return true;
-        }
-
-        return false;
     }
 
 
