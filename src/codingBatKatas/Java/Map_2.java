@@ -1,4 +1,4 @@
-package codingBatKatas;
+package codingBatKatas.Java;
 
 import java.util.HashMap;
 import java.util.Map;

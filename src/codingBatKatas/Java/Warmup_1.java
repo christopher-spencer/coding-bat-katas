@@ -1,4 +1,4 @@
-package codingBatKatas;
+package codingBatKatas.Java;
 
 public class Warmup_1 {
 
