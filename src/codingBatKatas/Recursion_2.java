@@ -231,7 +231,4 @@ public class Recursion_2 {
                 splitHelper(start + 1, nums, sum1, sum2 + nums[start]);
     }
 
-
-
-
 }
